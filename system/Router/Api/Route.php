@@ -1,6 +1,6 @@
 <?php
 
-namespace System\Router\Web;
+namespace System\Router\Api;
 
 class Route{
 
@@ -10,7 +10,7 @@ class Route{
         $class = $executedMethod[0];
         $method = $executedMethod[1];
         global $routes;
-        $routes['get'][] = array('url' => trim($url, "/ "), 'class' => $class, 'method' => $method, 'name' => $name);
+        $routes['get'][] = array('url' => "api/".trim($url, "/ "), 'class' => $class, 'method' => $method, 'name' => $name);
     }
 
     public function post($url  , $executedMethod , $name = null)
@@ -19,7 +19,8 @@ class Route{
         $class = $executedMethod[0];
         $method = $executedMethod[1];
         global $routes;
-        $routes['post'][] = array('url' => trim($url, "/ "), 'class' => $class, 'method' => $method, 'name' => $name);
+
+        $routes['post'][] = array('url' => "api/".trim($url, "/ "), 'class' => $class, 'method' => $method, 'name' => $name);
     }
 
     public function put($url  , $executedMethod , $name = null)
@@ -28,7 +29,7 @@ class Route{
         $class = $executedMethod[0];
         $method = $executedMethod[1];
         global $routes;
-        $routes['put'][] = array('url' => trim($url, "/ "), 'class' => $class, 'method' => $method, 'name' => $name);
+        $routes['put'][] = array('url' => "api/".trim($url, "/ "), 'class' => $class, 'method' => $method, 'name' => $name);
     }
 
     public function delete($url  , $executedMethod , $name = null)
@@ -37,9 +38,9 @@ class Route{
         $class = $executedMethod[0];
         $method = $executedMethod[1];
         global $routes;
-        $routes['delete'][] = array('url' => trim($url, "/ "), 'class' => $class, 'method' => $method, 'name' => $name);
+        $routes['delete'][] = array('url' => "api/".trim($url, "/ "), 'class' => $class, 'method' => $method, 'name' => $name);
     }
-    
+
 
 
 }
