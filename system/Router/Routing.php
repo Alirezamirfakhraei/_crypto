@@ -15,6 +15,7 @@ class Routing
 
          global $routes;
          $this->routes = $routes;
+         //end
      }
 
 }
