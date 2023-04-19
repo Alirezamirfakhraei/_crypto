@@ -1,6 +1,7 @@
 <?php
 
 namespace System\Router;
+use ReflectionMethod;
 
 class Routing
 {
@@ -22,11 +23,44 @@ class Routing
     public function run()
     {
 
+        $match = $this->match();
+        if (empty($match)){
+             $this->error404();
+        }
+
+        $classPath = str_replace('\\' , '/' , $match["class"]);
+        $path = BASE_DIR."/App/Http/Controllers".$classPath.".php";
+        if (!file_exists($path)){
+             $this->error404();
+        }
+
+
+        $class = "\App\Http\Controllers\\".$match["class"];
+        $object = new $class;
+        if (!method_exists($object , $match["method"])){
+            $reflection = new ReflectionMethod($class , $match["method"]);
+            $parameterCount = $reflection->getNumberOfParameters();
+            if ($parameterCount <= count($this->values)){
+                call_user_func_array(array($object , $match["method"]) , $this->values);
+            }else{
+                $this->error404();
+            }
+        }else{
+            $this->error404();
+        }
     }
 
-    public function merge()
+    public function match()
     {
-
+        $reserveRoutes = $this->routes[$this->method_field];
+        foreach ($reserveRoutes as $reserveRoute) {
+            if ($this->compare($reserveRoute['url'])){
+                return ["class" => $reserveRoute['class'] , "methode" => $reserveRoute['methode']];
+            }else{
+                $this->values = [];
+            }
+        }
+        return [];
     }
 
     public function compare($reservedRouteUrl)
