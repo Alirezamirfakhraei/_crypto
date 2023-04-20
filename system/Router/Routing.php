@@ -29,23 +29,24 @@ class Routing
         }
 
         $classPath = str_replace('\\' , '/' , $match["class"]);
-        $path = BASE_DIR."/App/Http/Controllers".$classPath.".php";
+        $path = BASE_DIR. "/app/Http/Controllers/".$classPath.".php";
         if (!file_exists($path)){
              $this->error404();
         }
 
-
         $class = "\App\Http\Controllers\\".$match["class"];
         $object = new $class;
-        if (!method_exists($object , $match["method"])){
+        if (method_exists($object , $match["method"])){
             $reflection = new ReflectionMethod($class , $match["method"]);
             $parameterCount = $reflection->getNumberOfParameters();
             if ($parameterCount <= count($this->values)){
                 call_user_func_array(array($object , $match["method"]) , $this->values);
             }else{
+
                 $this->error404();
             }
         }else{
+
             $this->error404();
         }
     }
@@ -55,7 +56,7 @@ class Routing
         $reserveRoutes = $this->routes[$this->method_field];
         foreach ($reserveRoutes as $reserveRoute) {
             if ($this->compare($reserveRoute['url'])){
-                return ["class" => $reserveRoute['class'] , "methode" => $reserveRoute['methode']];
+                return ["class" => $reserveRoute['class'] , "method" => $reserveRoute['method']];
             }else{
                 $this->values = [];
             }
@@ -77,14 +78,13 @@ class Routing
         //part3
         foreach ($this->current_route as $key => $currentRouteElement) {
             $reservedRouteUrlElement = $reservedRouteUrlArray[$key];
-            if (substr($reservedRouteUrlElement, 0, 1) == "{" and substr($reservedRouteUrlElement, -1) == "}") {
-                array_push($this->values, $currentRouteElement);
+            if (str_starts_with($reservedRouteUrlElement, "{") && str_starts_with($reservedRouteUrlElement, -1) == "}"){
+                $this->values[] = $currentRouteElement;
             } elseif ($reservedRouteUrlElement != $currentRouteElement) {
                 return false;
             }
         }
-
-
+        return true;
     }
 
     public function error404()

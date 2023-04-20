@@ -8,4 +8,4 @@ Route::get('create' , 'HomeController@create' , 'create');
 Route::post('store' , 'HomeController@store' , 'store');
 Route::get('edit/{id}' , 'HomeController@edit' , 'edit');
 Route::put('/update/{id}' , 'HomeController@update' , 'update');
-Route::get('/delete/{id}' , 'HomeController@destroy' , 'destroy');
+Route::post('/delete/{id}' , 'HomeController@destroy' , 'destroy');

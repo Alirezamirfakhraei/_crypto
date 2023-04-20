@@ -4,7 +4,7 @@ namespace System\Router\Web;
 
 class Route{
 
-    public function get($url  , $executedMethod , $name = null)
+    public static function get($url  , $executedMethod , $name = null)
     {
         $executedMethod = explode("@" , $executedMethod);
         $class = $executedMethod[0];
@@ -13,7 +13,7 @@ class Route{
         $routes['get'][] = array('url' => trim($url, "/ "), 'class' => $class, 'method' => $method, 'name' => $name);
     }
 
-    public function post($url  , $executedMethod , $name = null)
+    public static function post($url  , $executedMethod , $name = null)
     {
         $executedMethod = explode("@" , $executedMethod);
         $class = $executedMethod[0];
@@ -22,7 +22,7 @@ class Route{
         $routes['post'][] = array('url' => trim($url, "/ "), 'class' => $class, 'method' => $method, 'name' => $name);
     }
 
-    public function put($url  , $executedMethod , $name = null)
+    public static function put($url  , $executedMethod , $name = null)
     {
         $executedMethod = explode("@" , $executedMethod);
         $class = $executedMethod[0];
@@ -31,7 +31,7 @@ class Route{
         $routes['put'][] = array('url' => trim($url, "/ "), 'class' => $class, 'method' => $method, 'name' => $name);
     }
 
-    public function delete($url  , $executedMethod , $name = null)
+    public static function delete($url  , $executedMethod , $name = null)
     {
         $executedMethod = explode("@" , $executedMethod);
         $class = $executedMethod[0];
