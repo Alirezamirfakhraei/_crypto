@@ -2,7 +2,14 @@
 
 namespace System\Database\ORM;
 
-class Model
-{
+use System\Database\Traits\HasCRUD;
+use System\Database\Traits\HasAttributes;
+use System\Database\Traits\HasQueryBuilder;
+use System\Database\Traits\HasMethodCaller;
+use System\Database\Traits\HasRelation;
+use System\Database\Traits\HasSoftDelete;
 
+abstract class Model
+{
+    use HasCrud,HasAttributes,HasQueryBuilder,HasMethodCaller,HasRelation,HasSoftDelete ;
 }
