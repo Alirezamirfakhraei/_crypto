@@ -86,5 +86,21 @@ trait HasQueryBuilder
         $this->removeValues();
     }
 
+    protected function executeQuery()
+    {
+        $query = $this->sql;
+        if (!empty($this->where)){
+            $whereString = '';
+            foreach ($this->where as $where) {
+                $whereString == '' ? $whereString .=$where : $whereString .= ' '.$where['operator'].' '.$where['condition'];
+            }
+            $query .= 'WHERE'.$whereString;
 
+            if (!empty($this->orderBY)) {
+                $query .= 'limit' . $this->limit['from'].' , '.$this->limit['number'].' ';
+            }
+            $query .= ' ; ';
+            echo $query.'<hr>/';
+        }
+    }
 }
