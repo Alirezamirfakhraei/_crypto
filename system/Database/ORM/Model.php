@@ -12,4 +12,6 @@ use System\Database\Traits\HasSoftDelete;
 abstract class Model
 {
     use HasCrud,HasAttributes,HasQueryBuilder,HasMethodCaller,HasRelation,HasSoftDelete ;
+
+    private $table;
 }

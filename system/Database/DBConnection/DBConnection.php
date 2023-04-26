@@ -13,7 +13,7 @@ class DBConnection
 
     }
 
-    private static function getDBConnectionInstanse()
+    public static function getDBConnectionInstance()
     {
         if (self::$dbConnectionInstanse == null){
             $DBConnectionInstanse = new DBConnection();
@@ -36,6 +36,6 @@ class DBConnection
 
     public function newInsertID()
     {
-        return self::getDBConnectionInstanse()->lastInsertId();
+        return self::getDBConnectionInstance()->lastInsertId();
     }
 }
