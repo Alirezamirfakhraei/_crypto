@@ -13,5 +13,15 @@ abstract class Model
 {
     use HasCrud,HasAttributes,HasQueryBuilder,HasMethodCaller,HasRelation,HasSoftDelete ;
 
-    private $table;
+    protected $table;
+    protected $fillabe = [];
+    protected $hidden = [];
+    protected $casts = [];
+    protected $primaryKey = 'id';
+    protected $createdAt = 'createdAt';
+    protected $updateAt = 'updateAt';
+    protected $deleteAt = null;
+    protected $colloction = [];
+
+
 }
