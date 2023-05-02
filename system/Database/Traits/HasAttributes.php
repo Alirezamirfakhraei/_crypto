@@ -46,9 +46,30 @@ trait HasAttributes
         return in_array($attribute, array_keys($this->casts));
     }
 
-    private function castsDecodeValue(string $attribute, $value)
+    private function castsEncodeValue(string $attributeKey, $value)
     {
+        if ($this->casts[$attributeKey] == 'array' || $this->casts[$attributeKey] == 'object') {
+            return serialize($value);
+        }
+        return $value;
+    }
 
+    private function castsDecodeValue(string $attributeKey, $value)
+    {
+        if ($this->casts[$attributeKey] == 'array' || $this->casts[$attributeKey] == 'object') {
+            return unserialize($value);
+        }
+        return $value;
+    }
+
+    private function arrayToCastEncodeValue($values)
+    {
+        $newArray = [];
+        foreach ($values as $attribute => $value) {
+            $this->inCastsAttributes($attribute) == true ? $newArray[$attribute] =
+                $this->castsEncodeValue($attribute, $value) : $newArray[$attribute] = $value;
+        }
+        return $newArray;
     }
 
 }
