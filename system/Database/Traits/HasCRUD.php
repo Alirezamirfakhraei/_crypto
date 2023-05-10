@@ -117,6 +117,35 @@ trait HasCRUD
         return $this;
     }
 
+    protected function weherInMehtod($attribute , $values)
+    {
+        if (is_array($values)){
+            $valuesArray = [];
+            foreach ($values as $value){
+                $this->addValue($attribute , $value);
+                $valuesArray[] = '?';
+            }
+            $condition = $this->getAttributeName($attribute).' IN.('.implode(',' , $valuesArray).')';
+            $operator = 'AND';
+            $this->setWhere($operator , $condition);
+            $this->setAllowedMethods(['where', 'whereOR', 'whereIn', 'whereNull' . 'whereNotNull', 'limit', 'OrderBy', 'get', 'paginate']);
+            return $this;
+        }
+    }
+
+    protected function orderByMethod($attribute , $expression)
+    {
+        $this->setOrderBy($attribute , $expression);
+        $this->setAllowedMethods(['limit', 'OrderBy', 'get', 'paginate']);
+        return $this;
+    }
+    protected function limitMethod($from , $number)
+    {
+        $this->setLimit($from , $number);
+        $this->setAllowedMethods(['limit', 'OrderBy', 'get', 'paginate']);
+        return $this;
+    }
+
 
     protected function fill()
     {
