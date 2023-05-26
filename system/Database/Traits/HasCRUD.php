@@ -148,7 +148,7 @@ trait HasCRUD
             }
             $statement = $this->executeQuery();
             $data = $statement->fetchAll();
-            if ($data){
+            if ($data){ 
                 $this->arrayToObjects($data);
                 return $this->colloction;
             }
