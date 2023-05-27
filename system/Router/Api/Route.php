@@ -4,43 +4,25 @@ namespace System\Router\Api;
 
 class Route{
 
-    public function get($url  , $executedMethod , $name = null)
-    {
-        $executedMethod = explode("@" , $executedMethod);
-        $class = $executedMethod[0];
-        $method = $executedMethod[1];
+    public static function get($url, $executeMethod, $name = null){
+
+        $executeMethod = explode('@', $executeMethod);
+        $class = $executeMethod[0];
+        $method = $executeMethod[1];
         global $routes;
-        $routes['get'][] = array('url' => "api/".trim($url, "/ "), 'class' => $class, 'method' => $method, 'name' => $name);
+        array_push($routes['get'], array('url' => "api/".trim($url, "/ "), 'class' => $class, 'method' => $method, 'name' => $name));
     }
 
-    public function post($url  , $executedMethod , $name = null)
-    {
-        $executedMethod = explode("@" , $executedMethod);
-        $class = $executedMethod[0];
-        $method = $executedMethod[1];
-        global $routes;
+    public static function post($url, $executeMethod, $name = null){
 
-        $routes['post'][] = array('url' => "api/".trim($url, "/ "), 'class' => $class, 'method' => $method, 'name' => $name);
+        $executeMethod = explode('@', $executeMethod);
+        $class = $executeMethod[0];
+        $method = $executeMethod[1];
+        global $routes;
+        array_push($routes['post'], array('url' => "api/".trim($url, "/ "), 'class' => $class, 'method' => $method, 'name' => $name));
     }
 
-    public function put($url  , $executedMethod , $name = null)
-    {
-        $executedMethod = explode("@" , $executedMethod);
-        $class = $executedMethod[0];
-        $method = $executedMethod[1];
-        global $routes;
-        $routes['put'][] = array('url' => "api/".trim($url, "/ "), 'class' => $class, 'method' => $method, 'name' => $name);
-    }
-
-    public function delete($url  , $executedMethod , $name = null)
-    {
-        $executedMethod = explode("@" , $executedMethod);
-        $class = $executedMethod[0];
-        $method = $executedMethod[1];
-        global $routes;
-        $routes['delete'][] = array('url' => "api/".trim($url, "/ "), 'class' => $class, 'method' => $method, 'name' => $name);
-    }
-
-
+   
 
 }
+
