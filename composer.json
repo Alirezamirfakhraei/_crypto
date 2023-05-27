@@ -1,11 +1,9 @@
 {
-  "require": {
-    "ext-pdo": "*"
-  },
-  "autoload": {
-    "psr-4": {
-      "App\\": "app/",
-      "System\\": "system/"
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "System\\": "system/"
+        }
     }
-  }
 }

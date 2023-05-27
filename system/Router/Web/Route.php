@@ -4,42 +4,41 @@ namespace System\Router\Web;
 
 class Route{
 
-    public static function get($url  , $executedMethod , $name = null)
-    {
-        $executedMethod = explode("@" , $executedMethod);
-        $class = $executedMethod[0];
-        $method = $executedMethod[1];
+    public static function get($url, $executeMethod, $name = null){
+
+        $executeMethod = explode('@', $executeMethod);
+        $class = $executeMethod[0];
+        $method = $executeMethod[1];
         global $routes;
-        $routes['get'][] = array('url' => trim($url, "/ "), 'class' => $class, 'method' => $method, 'name' => $name);
+        array_push($routes['get'], array('url' => trim($url, "/ "), 'class' => $class, 'method' => $method, 'name' => $name));
     }
 
-    public static function post($url  , $executedMethod , $name = null)
-    {
-        $executedMethod = explode("@" , $executedMethod);
-        $class = $executedMethod[0];
-        $method = $executedMethod[1];
+    public static function post($url, $executeMethod, $name = null){
+
+        $executeMethod = explode('@', $executeMethod);
+        $class = $executeMethod[0];
+        $method = $executeMethod[1];
         global $routes;
-        $routes['post'][] = array('url' => trim($url, "/ "), 'class' => $class, 'method' => $method, 'name' => $name);
+        array_push($routes['post'], array('url' => trim($url, "/ "), 'class' => $class, 'method' => $method, 'name' => $name));
     }
 
-    public static function put($url  , $executedMethod , $name = null)
-    {
-        $executedMethod = explode("@" , $executedMethod);
-        $class = $executedMethod[0];
-        $method = $executedMethod[1];
+    public static function put($url, $executeMethod, $name = null){
+
+        $executeMethod = explode('@', $executeMethod);
+        $class = $executeMethod[0];
+        $method = $executeMethod[1];
         global $routes;
-        $routes['put'][] = array('url' => trim($url, "/ "), 'class' => $class, 'method' => $method, 'name' => $name);
+        array_push($routes['put'], array('url' => trim($url, "/ "), 'class' => $class, 'method' => $method, 'name' => $name));
     }
 
-    public static function delete($url  , $executedMethod , $name = null)
-    {
-        $executedMethod = explode("@" , $executedMethod);
-        $class = $executedMethod[0];
-        $method = $executedMethod[1];
-        global $routes;
-        $routes['delete'][] = array('url' => trim($url, "/ "), 'class' => $class, 'method' => $method, 'name' => $name);
-    }
+    public static function delete($url, $executeMethod, $name = null){
 
+        $executeMethod = explode('@', $executeMethod);
+        $class = $executeMethod[0];
+        $method = $executeMethod[1];
+        global $routes;
+        array_push($routes['delete'], array('url' => trim($url, "/ "), 'class' => $class, 'method' => $method, 'name' => $name));
+    }
 
 
 }

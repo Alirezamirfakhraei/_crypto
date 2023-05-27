@@ -1,6 +1,8 @@
 <?php
-const DBHOST = 'localhost';
-const DBNAME = '_crypto';
-const DBUSERNAME = 'root';
-const DBPASSWORD = '';
-?>
+
+return [
+    'DBHOST' => '127.0.0.1',
+    'DBNAME' => 'mvc_ads',
+    'DBUSERNAME' => 'root',
+    'DBPASSWORD' => ''
+];
