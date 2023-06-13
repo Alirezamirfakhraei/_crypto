@@ -2,7 +2,7 @@
 
 return [
     'SMTP' => [
-        'Host'       => 'smtp.mailtrap.io',
+        'Host'       => '',
         'SMTPAuth'   => true,
         'Username'   => '33',
         'Password'   => '22',

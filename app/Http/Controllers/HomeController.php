@@ -2,18 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use System\Database\DBBuilder\DBBuilder;
+
 class HomeController extends Controller
 {
 
     public function index(){
-        // echo "index method in HomeController";
-        $ads = Ads::all();
-        view('app.create',$ads);
+        echo 'sdfsdf';
     }
 
     public function create(){
         echo "create method in HomeController";
-        view('app.create');
     }
     public function store(){
         echo "store method in HomeController";

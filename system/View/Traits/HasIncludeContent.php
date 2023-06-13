@@ -24,7 +24,7 @@ trait HasIncludeContent{
     {
         $includesNamesArray = [];
        preg_match_all("/@include+\('([^)]+)'\)/", $this->content, $includesNamesArray, PREG_UNMATCHED_AS_NULL);
-       return isset($includesNamesArray[1]) ? $includesNamesArray[1] : false;
+       return $includesNamesArray[1] ?? false;
     }
 
     private function initialIncludes($includeName)
