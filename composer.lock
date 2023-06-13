@@ -1,9 +1,14 @@
 {
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "1dde4599b8e3f043f033e11b686727d7",
     "packages": [
         {
             "name": "doctrine/inflector",
             "version": "2.0.6",
-            "version_normalized": "2.0.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
@@ -26,9 +31,7 @@
                 "phpunit/phpunit": "^8.5 || ^9.5",
                 "vimeo/psalm": "^4.25"
             },
-            "time": "2022-10-20T09:10:12+00:00",
             "type": "library",
-            "installation-source": "source",
             "autoload": {
                 "psr-4": {
                     "Doctrine\\Inflector\\": "lib/Doctrine/Inflector"
@@ -92,12 +95,11 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../doctrine/inflector"
+            "time": "2022-10-20T09:10:12+00:00"
         },
         {
             "name": "illuminate/bus",
             "version": "v8.83.27",
-            "version_normalized": "8.83.27.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/bus.git",
@@ -119,14 +121,12 @@
             "suggest": {
                 "illuminate/queue": "Required to use closures when chaining jobs (^7.0)."
             },
-            "time": "2022-03-07T15:02:42+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "8.x-dev"
                 }
             },
-            "installation-source": "source",
             "autoload": {
                 "psr-4": {
                     "Illuminate\\Bus\\": ""
@@ -148,12 +148,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "install-path": "../illuminate/bus"
+            "time": "2022-03-07T15:02:42+00:00"
         },
         {
             "name": "illuminate/collections",
             "version": "v8.83.27",
-            "version_normalized": "8.83.27.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
@@ -173,14 +172,12 @@
             "suggest": {
                 "symfony/var-dumper": "Required to use the dump method (^5.4)."
             },
-            "time": "2022-06-23T15:29:49+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "8.x-dev"
                 }
             },
-            "installation-source": "source",
             "autoload": {
                 "files": [
                     "helpers.php"
@@ -205,12 +202,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "install-path": "../illuminate/collections"
+            "time": "2022-06-23T15:29:49+00:00"
         },
         {
             "name": "illuminate/container",
             "version": "v8.83.27",
-            "version_normalized": "8.83.27.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -230,14 +226,12 @@
             "provide": {
                 "psr/container-implementation": "1.0"
             },
-            "time": "2022-02-02T21:03:35+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "8.x-dev"
                 }
             },
-            "installation-source": "source",
             "autoload": {
                 "psr-4": {
                     "Illuminate\\Container\\": ""
@@ -259,12 +253,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "install-path": "../illuminate/container"
+            "time": "2022-02-02T21:03:35+00:00"
         },
         {
             "name": "illuminate/contracts",
             "version": "v8.83.27",
-            "version_normalized": "8.83.27.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -281,14 +274,12 @@
                 "psr/container": "^1.0",
                 "psr/simple-cache": "^1.0"
             },
-            "time": "2022-01-13T14:47:47+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "8.x-dev"
                 }
             },
-            "installation-source": "source",
             "autoload": {
                 "psr-4": {
                     "Illuminate\\Contracts\\": ""
@@ -310,12 +301,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "install-path": "../illuminate/contracts"
+            "time": "2022-01-13T14:47:47+00:00"
         },
         {
             "name": "illuminate/events",
             "version": "v8.83.27",
-            "version_normalized": "8.83.27.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/events.git",
@@ -336,14 +326,12 @@
                 "illuminate/support": "^8.0",
                 "php": "^7.3|^8.0"
             },
-            "time": "2021-09-15T14:32:50+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "8.x-dev"
                 }
             },
-            "installation-source": "source",
             "autoload": {
                 "files": [
                     "functions.php"
@@ -368,12 +356,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "install-path": "../illuminate/events"
+            "time": "2021-09-15T14:32:50+00:00"
         },
         {
             "name": "illuminate/filesystem",
             "version": "v8.83.27",
-            "version_normalized": "8.83.27.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
@@ -404,14 +391,12 @@
                 "symfony/filesystem": "Required to enable support for relative symbolic links (^5.4).",
                 "symfony/mime": "Required to enable support for guessing extensions (^5.4)."
             },
-            "time": "2022-01-15T15:00:40+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "8.x-dev"
                 }
             },
-            "installation-source": "source",
             "autoload": {
                 "psr-4": {
                     "Illuminate\\Filesystem\\": ""
@@ -433,12 +418,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "install-path": "../illuminate/filesystem"
+            "time": "2022-01-15T15:00:40+00:00"
         },
         {
             "name": "illuminate/macroable",
             "version": "v8.83.27",
-            "version_normalized": "8.83.27.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -453,14 +437,12 @@
             "require": {
                 "php": "^7.3|^8.0"
             },
-            "time": "2021-11-16T13:57:03+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "8.x-dev"
                 }
             },
-            "installation-source": "source",
             "autoload": {
                 "psr-4": {
                     "Illuminate\\Support\\": ""
@@ -482,12 +464,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "install-path": "../illuminate/macroable"
+            "time": "2021-11-16T13:57:03+00:00"
         },
         {
             "name": "illuminate/pipeline",
             "version": "v8.83.27",
-            "version_normalized": "8.83.27.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/pipeline.git",
@@ -504,14 +485,12 @@
                 "illuminate/support": "^8.0",
                 "php": "^7.3|^8.0"
             },
-            "time": "2021-03-26T18:39:16+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "8.x-dev"
                 }
             },
-            "installation-source": "source",
             "autoload": {
                 "psr-4": {
                     "Illuminate\\Pipeline\\": ""
@@ -533,12 +512,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "install-path": "../illuminate/pipeline"
+            "time": "2021-03-26T18:39:16+00:00"
         },
         {
             "name": "illuminate/support",
             "version": "v8.83.27",
-            "version_normalized": "8.83.27.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
@@ -572,14 +550,12 @@
                 "symfony/var-dumper": "Required to use the dd function (^5.4).",
                 "vlucas/phpdotenv": "Required to use the Env class and env helper (^5.4.1)."
             },
-            "time": "2022-09-21T21:30:03+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "8.x-dev"
                 }
             },
-            "installation-source": "source",
             "autoload": {
                 "files": [
                     "helpers.php"
@@ -604,12 +580,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "install-path": "../illuminate/support"
+            "time": "2022-09-21T21:30:03+00:00"
         },
         {
             "name": "illuminate/view",
             "version": "v8.83.27",
-            "version_normalized": "8.83.27.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/view.git",
@@ -632,14 +607,12 @@
                 "illuminate/support": "^8.0",
                 "php": "^7.3|^8.0"
             },
-            "time": "2022-04-14T13:47:10+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "8.x-dev"
                 }
             },
-            "installation-source": "source",
             "autoload": {
                 "psr-4": {
                     "Illuminate\\View\\": ""
@@ -661,12 +634,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "install-path": "../illuminate/view"
+            "time": "2022-04-14T13:47:10+00:00"
         },
         {
             "name": "jenssegers/blade",
             "version": "v1.4.0",
-            "version_normalized": "1.4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jenssegers/blade.git",
@@ -686,9 +658,7 @@
                 "phpunit/phpunit": "^6.0|^7.0",
                 "satooshi/php-coveralls": "^1.0"
             },
-            "time": "2020-09-17T08:25:26+00:00",
             "type": "library",
-            "installation-source": "source",
             "autoload": {
                 "psr-4": {
                     "Jenssegers\\Blade\\": "src/"
@@ -726,12 +696,11 @@
                     "type": "open_collective"
                 }
             ],
-            "install-path": "../jenssegers/blade"
+            "time": "2020-09-17T08:25:26+00:00"
         },
         {
             "name": "koolreport/blade",
             "version": "1.0.0",
-            "version_normalized": "1.0.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/koolreport/blade.git",
@@ -746,9 +715,7 @@
             "require": {
                 "jenssegers/blade": "^1.1"
             },
-            "time": "2019-06-01T06:08:25+00:00",
             "type": "library",
-            "installation-source": "source",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
@@ -772,12 +739,11 @@
                 "issues": "https://github.com/koolreport/blade/issues",
                 "source": "https://github.com/koolreport/blade/tree/master"
             },
-            "install-path": "../koolreport/blade"
+            "time": "2019-06-01T06:08:25+00:00"
         },
         {
             "name": "nesbot/carbon",
             "version": "2.67.0",
-            "version_normalized": "2.67.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
@@ -809,7 +775,6 @@
                 "phpunit/phpunit": "^7.5.20 || ^8.5.26 || ^9.5.20",
                 "squizlabs/php_codesniffer": "^3.4"
             },
-            "time": "2023-05-25T22:09:47+00:00",
             "bin": [
                 "bin/carbon"
             ],
@@ -830,7 +795,6 @@
                     ]
                 }
             },
-            "installation-source": "source",
             "autoload": {
                 "psr-4": {
                     "Carbon\\": "src/Carbon/"
@@ -877,12 +841,11 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../nesbot/carbon"
+            "time": "2023-05-25T22:09:47+00:00"
         },
         {
             "name": "psr/container",
             "version": "1.1.2",
-            "version_normalized": "1.1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/container.git",
@@ -897,9 +860,7 @@
             "require": {
                 "php": ">=7.4.0"
             },
-            "time": "2021-11-05T16:50:12+00:00",
             "type": "library",
-            "installation-source": "source",
             "autoload": {
                 "psr-4": {
                     "Psr\\Container\\": "src/"
@@ -928,12 +889,11 @@
                 "issues": "https://github.com/php-fig/container/issues",
                 "source": "https://github.com/php-fig/container/tree/1.1.2"
             },
-            "install-path": "../psr/container"
+            "time": "2021-11-05T16:50:12+00:00"
         },
         {
             "name": "psr/simple-cache",
             "version": "1.0.1",
-            "version_normalized": "1.0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/simple-cache.git",
@@ -948,14 +908,12 @@
             "require": {
                 "php": ">=5.3.0"
             },
-            "time": "2017-10-23T01:57:42+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "1.0.x-dev"
                 }
             },
-            "installation-source": "source",
             "autoload": {
                 "psr-4": {
                     "Psr\\SimpleCache\\": "src/"
@@ -982,12 +940,11 @@
             "support": {
                 "source": "https://github.com/php-fig/simple-cache/tree/master"
             },
-            "install-path": "../psr/simple-cache"
+            "time": "2017-10-23T01:57:42+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
             "version": "v3.3.0",
-            "version_normalized": "3.3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
@@ -1002,7 +959,6 @@
             "require": {
                 "php": ">=8.1"
             },
-            "time": "2023-05-23T14:45:45+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1013,7 +969,6 @@
                     "url": "https://github.com/symfony/contracts"
                 }
             },
-            "installation-source": "source",
             "autoload": {
                 "files": [
                     "function.php"
@@ -1052,12 +1007,11 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../symfony/deprecation-contracts"
+            "time": "2023-05-23T14:45:45+00:00"
         },
         {
             "name": "symfony/finder",
             "version": "v5.4.21",
-            "version_normalized": "5.4.21.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -1074,9 +1028,7 @@
                 "symfony/deprecation-contracts": "^2.1|^3",
                 "symfony/polyfill-php80": "^1.16"
             },
-            "time": "2023-02-16T09:33:00+00:00",
             "type": "library",
-            "installation-source": "source",
             "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\Finder\\": ""
@@ -1118,12 +1070,11 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../symfony/finder"
+            "time": "2023-02-16T09:33:00+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
             "version": "v1.27.0",
-            "version_normalized": "1.27.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
@@ -1144,7 +1095,6 @@
             "suggest": {
                 "ext-mbstring": "For best performance"
             },
-            "time": "2022-11-03T14:55:06+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1155,7 +1105,6 @@
                     "url": "https://github.com/symfony/polyfill"
                 }
             },
-            "installation-source": "source",
             "autoload": {
                 "files": [
                     "bootstrap.php"
@@ -1204,12 +1153,11 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../symfony/polyfill-mbstring"
+            "time": "2022-11-03T14:55:06+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
             "version": "v1.27.0",
-            "version_normalized": "1.27.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
@@ -1224,7 +1172,6 @@
             "require": {
                 "php": ">=7.1"
             },
-            "time": "2022-11-03T14:55:06+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1235,7 +1182,6 @@
                     "url": "https://github.com/symfony/polyfill"
                 }
             },
-            "installation-source": "source",
             "autoload": {
                 "files": [
                     "bootstrap.php"
@@ -1290,12 +1236,11 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../symfony/polyfill-php80"
+            "time": "2022-11-03T14:55:06+00:00"
         },
         {
             "name": "symfony/translation",
             "version": "v6.3.0",
-            "version_normalized": "6.3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
@@ -1340,9 +1285,7 @@
                 "symfony/service-contracts": "^2.5|^3",
                 "symfony/yaml": "^5.4|^6.0"
             },
-            "time": "2023-05-19T12:46:45+00:00",
             "type": "library",
-            "installation-source": "source",
             "autoload": {
                 "files": [
                     "Resources/functions.php"
@@ -1387,12 +1330,11 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../symfony/translation"
+            "time": "2023-05-19T12:46:45+00:00"
         },
         {
             "name": "symfony/translation-contracts",
             "version": "v3.3.0",
-            "version_normalized": "3.3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation-contracts.git",
@@ -1407,7 +1349,6 @@
             "require": {
                 "php": ">=8.1"
             },
-            "time": "2023-05-30T17:17:10+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1418,7 +1359,6 @@
                     "url": "https://github.com/symfony/contracts"
                 }
             },
-            "installation-source": "source",
             "autoload": {
                 "psr-4": {
                     "Symfony\\Contracts\\Translation\\": ""
@@ -1468,12 +1408,11 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../symfony/translation-contracts"
+            "time": "2023-05-30T17:17:10+00:00"
         },
         {
             "name": "voku/portable-ascii",
             "version": "1.6.1",
-            "version_normalized": "1.6.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/portable-ascii.git",
@@ -1494,9 +1433,7 @@
             "suggest": {
                 "ext-intl": "Use Intl for transliterator_transliterate() support"
             },
-            "time": "2022-01-24T18:55:24+00:00",
             "type": "library",
-            "installation-source": "source",
             "autoload": {
                 "psr-4": {
                     "voku\\": "src/voku/"
@@ -1545,9 +1482,16 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../voku/portable-ascii"
+            "time": "2022-01-24T18:55:24+00:00"
         }
     ],
-    "dev": true,
-    "dev-package-names": []
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
 }

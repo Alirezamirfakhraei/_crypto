@@ -20,7 +20,7 @@ class ViewBuilder
         $this->content = $this->viewLoader($dir);
         $this->checkExtendsContent();
         $this->checkIncludesContent();
-        Composer::setViews($this->viewNameArray);
-        $this->vars = Composer::getVars();
+        Composer::setViewArray($this->viewNameArray);
+        $this->vars = Composer::getViewVars();
     }
 }

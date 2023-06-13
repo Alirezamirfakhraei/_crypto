@@ -27,14 +27,14 @@ trait HasExtendsContent{
     {
         $filePathArray = [];
        preg_match("/s*@extends+\('([^)]+)'\)/", $this->content, $filePathArray);
-       return isset($filePathArray[1]) ? $filePathArray[1] : false;
+       return $filePathArray[1] ?? false;
     }
 
     private function findYieldsNames()
     {
         $yieldsNamesArray = [];
        preg_match_all("/@yield+\('([^)]+)'\)/", $this->extendsContent, $yieldsNamesArray, PREG_UNMATCHED_AS_NULL);
-       return isset($yieldsNamesArray[1]) ? $yieldsNamesArray[1] : false;
+       return $yieldsNamesArray[1] ?? false;
     }
 
     private function initialYields($yieldName)

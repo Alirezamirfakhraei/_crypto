@@ -3,6 +3,7 @@
 namespace System\Router;
 
 use ReflectionMethod;
+use System\Config\Config;
 
 class Routing{
 
@@ -31,7 +32,7 @@ class Routing{
      
 
       $classPath = str_replace('\\', '/', $match["class"]);
-      $path = BASE_DIR . "/app/Http/Controllers/".$classPath.".php";
+      $path = Config::get('app.BASE_DIR') . "/app/Http/Controllers/".$classPath.".php";
       if(!file_exists($path)){
         $this->error404();
       }
@@ -57,7 +58,7 @@ class Routing{
 
       $reservedRoutes = $this->routes[$this->method_field];
       foreach ($reservedRoutes as $reservedRoute) {
-        if($this->compare($reservedRoute['url']) == true){
+        if($this->compare($reservedRoute['url'])){
           return ["class" => $reservedRoute['class'], "method" => $reservedRoute['method']];
         }
         else{
@@ -71,7 +72,7 @@ class Routing{
 
       //part1
       if(trim($reservedRouteUrl, '/') === ''){
-        return trim($this->current_route[0], '/') === '' ? true : false;
+        return trim($this->current_route[0], '/') === '';
       }
 
       //part2
